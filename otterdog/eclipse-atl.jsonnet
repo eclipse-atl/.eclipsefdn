@@ -28,7 +28,9 @@ orgs.newOrg('eclipse-atl') {
         default_workflow_permissions: "write",
       },
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master'),
+        orgs.newBranchProtectionRule('master') {
+          required_approving_review_count: 0,
+        },
       ],
     },
     orgs.newRepo('atl-website') {
@@ -42,7 +44,9 @@ orgs.newOrg('eclipse-atl') {
         enabled: false,
       },
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master'),
+        orgs.newBranchProtectionRule('master') {
+          required_approving_review_count: 0,
+        },
       ],
     },
   ],
