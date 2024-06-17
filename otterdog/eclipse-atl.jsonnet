@@ -27,6 +27,11 @@ orgs.newOrg('eclipse-atl') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          required_approving_review_count: 0,
+        },
+      ],
     },
     orgs.newRepo('atl-website') {
       allow_merge_commit: true,
@@ -38,6 +43,11 @@ orgs.newOrg('eclipse-atl') {
       workflows+: {
         enabled: false,
       },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          required_approving_review_count: 0,
+        },
+      ],
     },
   ],
 }
