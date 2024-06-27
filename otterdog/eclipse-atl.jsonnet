@@ -23,6 +23,13 @@ orgs.newOrg('eclipse-atl') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
+      description: "Eclipse ATL Transformation Language is a model transformation language and toolkit.",
+      homepage: "https://eclipse.dev/atl/",
+      topics+: [
+        "mde",
+        "modeling",
+        "transformation"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
