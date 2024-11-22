@@ -56,5 +56,21 @@ orgs.newOrg('eclipse-atl') {
         },
       ],
     },
+    orgs.newRepo('atl-website-hugo') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "main",
+      delete_branch_on_merge: false,
+      dependabot_alerts_enabled: false,
+      web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          required_approving_review_count: 0,
+        },
+      ],
+    },
   ],
 }
