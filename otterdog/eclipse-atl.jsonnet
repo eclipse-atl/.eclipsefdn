@@ -67,7 +67,7 @@ orgs.newOrg('eclipse-atl') {
         enabled: false,
       },
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
+        orgs.newBranchProtectionRule('main') {
           required_approving_review_count: 0,
         },
       ],
