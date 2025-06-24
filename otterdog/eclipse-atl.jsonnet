@@ -18,14 +18,19 @@ orgs.newOrg('modeling.mmt.atl', 'eclipse-atl') {
     },
   ],
   _repositories+:: [
+    orgs.newRepo('.github') {
+    },
     orgs.newRepo('atl') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
       description: "Eclipse ATL Transformation Language is a model transformation language and toolkit.",
       has_discussions: true,
       homepage: "https://eclipse.dev/atl/",
+      private_vulnerability_reporting_enabled: true,
+      code_scanning_default_setup_enabled: true,
+      code_scanning_default_languages: [
+        "java-kotlin",
+      ],
       topics+: [
         "mde",
         "modeling",
@@ -73,10 +78,5 @@ orgs.newOrg('modeling.mmt.atl', 'eclipse-atl') {
         },
       ],
     },
-  ],
-} + {
-  # snippet added due to 'https://github.com/EclipseFdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'
-  _repositories+:: [
-    orgs.newRepo('.github')
   ],
 }
