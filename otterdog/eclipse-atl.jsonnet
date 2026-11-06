@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('modeling.mmt.atl', 'eclipse-atl') {
+orgs.newOrg('modeling.atl', 'eclipse-atl') {
   settings+: {
     web_commit_signoff_required: false,
     workflows+: {
